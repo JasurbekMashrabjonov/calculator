@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="../bootstrap.css">
+    <link rel="stylesheet" href="calculator.css">
+</head>
+
+<body>
+    <div class=" site">
+        <div class="row top container">
+            <div class="col top_left">
+                <h6 style="font-style: italic;">Kalkulyator</h6>
+            </div>
+            <div class="col top_right">
+
+            </div>
+        </div>
+        <div class="head container row">
+            <div class="col-2">
+                <h4>
+                    ≡
+                </h4>
+            </div>
+            <div class="col">
+                <h4>Odatdagi</h4>
+
+            </div>
+        </div>
+        <div class="maydon">
+            <form action="" name="f1">
+                <input type="text" placeholder="" name="i2" readonly>
+                <input type="text" placeholder="0" name="i1" maxlength="14" readonly>
+            </form>
+        </div>
+        <div class="m container">
+            <div class="row">
+                <div class="col-2">
+                    <h6 class="btn btn-light">
+                        MC
+                    </h6>
+                </div>
+                <div class="col-2">
+                    <h6 class="btn btn-light">
+                        MR
+                    </h6>
+                </div>
+                <div class="col-2">
+                    <h6 class="btn btn-light">
+                        M+
+                    </h6>
+                </div>
+                <div class="col-2">
+                    <h6 class="btn btn-light">
+                        M-
+                    </h6>
+                </div>
+                <div class="col-2">
+                    <h6 class="btn btn-light">
+                        MS
+                    </h6>
+                </div>
+                <div class="col-2">
+                    <h6 class="btn btn-light">
+                        M
+                    </h6>
+                </div>
+
+            </div>
+        </div>
+        <div class="container amal1">
+            <div class="row">
+                <div class="col-3">
+                    <h1 class="smb h1" onclick="one()">%</h1>
+                </div>
+                <div class="col-3">
+                    <h1 class="smb h1" onclick="two()">√</h1>
+                </div>
+                <div class="col-3">
+                    <h1 class="smb h1" onclick="three()">x<sup>2</sup></h1>
+                </div>
+                <div class="col-3">
+                    <h1 class="smb h1" onclick="four()">1/x</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container amal2">
+            <div class="row">
+                <div class="col-3">
+                    <h1 class="smb h1" onclick="fife()">CE</h1>
+                </div>
+                <div class="col-3">
+                    <h1 class="smb h1" onclick="six()">C</h1>
+                </div>
+                <div class="col-3">
+                    <h1 class="smb h1" onclick="seven()">←</h1>
+                </div>
+                <div class="col-3">
+                    <h1 class="smb h1" onclick="amal('/')">÷</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container line1">
+            <div class="row">
+                <div class="col-3">
+                    <h1 class="smb h1" onclick="s('7')">7</h1>
+                </div>
+                <div class="col-3">
+                    <h1 class="smb h1" onclick="s('8')">8</h1>
+                </div>
+                <div class="col-3">
+                    <h1 class="smb h1" onclick="s('9')">9</h1>
+                </div>
+                <div class="col-3">
+                    <h1 class="smb h1" onclick="amal('*')">×</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container line2">
+            <div class="row">
+                <div class="col-3">
+                    <h1 class="smb h1" onclick="s('4')">4</h1>
+                </div>
+                <div class="col-3">
+                    <h1 class="smb h1" onclick="s('5')">5</h1>
+                </div>
+                <div class="col-3">
+                    <h1 class="smb h1" onclick="s('6')">6</h1>
+                </div>
+                <div class="col-3">
+                    <h1 class="smb h1" onclick="amal('-')">-</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container line3">
+            <div class="row">
+                <div class="col-3">
+                    <h1 class="smb h1" onclick="s('1')">1</h1>
+                </div>
+                <div class="col-3">
+                    <h1 class="smb h1" onclick="s('2')">2</h1>
+                </div>
+                <div class="col-3">
+                    <h1 class="smb h1" onclick="s('3')">3</h1>
+                </div>
+                <div class="col-3">
+                    <h1 class="smb h1" onclick="amal('+')">+</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container line4">
+            <div class="row">
+                <div class="col-3">
+                    <h1 class="smb h1" onclick="eleven()">±</h1>
+                </div>
+                <div class="col-3">
+                    <h1 class="smb h1" onclick="s('0')">0</h1>
+                </div>
+                <div class="col-3">
+                    <h1 class="smb h1" onclick="twelve()">,</h1>
+                </div>
+                <div class="col-3">
+                    <h1 class="smb h1" onclick="teng()">=</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function one() {
+            a = document.f1.i1.value;
+            S = a / 100;
+            document.f1.i1.value = S;
+        }
+
+        function two() {
+            a = document.f1.i1.value;
+            S = Math.sqrt(a);
+            document.f1.i1.value = S;
+        }
+
+        function three() {
+            a = document.f1.i1.value;
+            S = a * a;
+            document.f1.i1.value = S;
+        }
+
+        function fife() {
+            document.f1.i1.value = "";
+            document.f1.i2.value = "";
+        }
+
+        function six() {
+            document.f1.i2.value = "";
+            document.f1.i1.value = "";
+        }
+
+        function seven() {
+            a = document.f1.i1.value;
+            c = a * 0.1;
+            S = Math.floor(c);
+            document.f1.i1.value = S;
+            if (a == 0) {
+                document.f1.i1.value = '';
+
+            }
+        }
+
+        function s(a) {
+
+            document.f1.i1.value = document.f1.i1.value + a;
+
+
+            // NEFTGAZDEPOZIT
+        }
+
+        function amal(a) {
+            document.f1.i1.value = document.f1.i1.value + a;
+        }
+
+        function teng() {
+            b = eval(document.f1.i1.value);
+            document.f1.i1.value = b;
+
+        }
+
+        function eleven() {
+            a = document.f1.i1.value;
+            document.f1.i1.value = -a;
+
+        }
+
+        function twelve() {
+            document.f1.i1.value = document.f1.i1.value + '.';
+        }
+    </script>
+</body>
+
+</html>

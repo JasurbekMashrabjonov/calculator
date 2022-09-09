@@ -1,0 +1,43 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    user-select: none;
+    background-color: #808080;
+}
+
+.site {
+    border: none;
+    width: 400px;
+    margin: 0 auto;
+    background-color: #eee;
+}
+
+.maydon input {
+    width: 90%;
+    height: 60px;
+    font-size: 50px;
+    text-align-last: right;
+    border: none;
+    outline: none;
+    background-color: #eee
+}
+
+.maydon input:first-child {
+    font-size: 20px;
+}
+
+.smb {
+    background-color: rgb(248, 244, 244);
+    text-align: center;
+    border: 1px solid rgb(248, 244, 244);
+    border-radius: 2px;
+}
+
+.smb:hover {
+    background-color: rgb(219, 219, 219);
+    border: 1px solid #808080;
+}
